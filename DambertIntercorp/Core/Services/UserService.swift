@@ -55,6 +55,9 @@ class UserService: NSObject {
         let uid = Auth.auth().currentUser?.uid
         
         self.ref.child(uid!).observe(.value) { (snapshot) in
+            
+            
+            self.ref.child(uid!).removeAllObservers()
             if snapshot.exists() {
                 
                 let data = snapshot.value as? [String:String]

@@ -33,6 +33,10 @@ class ProfileViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     // MARK: Own Methods
     func setupView(){
         
@@ -62,7 +66,7 @@ class ProfileViewController: UIViewController {
     @IBAction func closeSessionTap(_ sender: Any) {
         
         try! Auth.auth().signOut()
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
 }

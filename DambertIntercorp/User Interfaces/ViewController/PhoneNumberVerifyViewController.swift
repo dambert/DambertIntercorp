@@ -57,7 +57,6 @@ class PhoneNumberVerifyViewController: UIViewController {
                     
                     Helper.hideLoading(viewController: self)
                     if user != nil{                        
-                        self.navigationController?.popToRootViewController(animated: false)
                         // Si el auth login fue correcto, entonces te redirigo al formulario de usuarios
                         self.performSegue(withIdentifier: Constants.Segue.VERIFY_TO_HOME , sender: nil)
                     }else{

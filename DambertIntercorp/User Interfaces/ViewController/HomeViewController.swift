@@ -17,11 +17,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.setupView()
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    // MARK: Own methods
+    func setupView(){
         
         UserService.sharedInstance.getUser { (userModel) in
             
@@ -31,10 +37,6 @@ class HomeViewController: UIViewController {
                 
             }
         }
-    }
-    
-    func setupView(){
-        
     }
     
     

@@ -47,8 +47,7 @@ class FormUserViewController: UIViewController {
                 
                 // Se logró guardar la información adicional del usuario exitosamente
                 if success == true {
-                     //Redireccionamos al HomeViewController
-                    self.navigationController?.popToRootViewController(animated: false)
+                     //Redireccionamos al HomeViewController                    
                      self.performSegue(withIdentifier: Constants.Segue.REGISTER_DATA_USER_TO_HOME, sender: nil)
                 }else{
                     // Ocurrió un error                    
