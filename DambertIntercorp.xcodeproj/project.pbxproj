@@ -23,6 +23,26 @@
 		C1B6B53122499CBC00DC8380 /* FormUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B6B53022499CBC00DC8380 /* FormUserViewController.swift */; };
 		C1B6B5342249A06400DC8380 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B6B5332249A06400DC8380 /* UserService.swift */; };
 		C1B6B5362249A5A500DC8380 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B6B5352249A5A500DC8380 /* UserModel.swift */; };
+		C1FE5AD0224B1AE300E2AB9D /* Omnes-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D80224B0876007A80AE /* Omnes-Black.otf */; };
+		C1FE5AD1224B1AE300E2AB9D /* Omnes-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D83224B0877007A80AE /* Omnes-BlackItalic.otf */; };
+		C1FE5AD2224B1AE300E2AB9D /* Omnes-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D77224B0873007A80AE /* Omnes-Bold.otf */; };
+		C1FE5AD3224B1AE300E2AB9D /* Omnes-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D81224B0876007A80AE /* Omnes-BoldItalic.otf */; };
+		C1FE5AD4224B1AE300E2AB9D /* Omnes-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D86224B0878007A80AE /* Omnes-ExtraLight.otf */; };
+		C1FE5AD5224B1AE300E2AB9D /* Omnes-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D78224B0873007A80AE /* Omnes-ExtraLightItalic.otf */; };
+		C1FE5AD6224B1AE300E2AB9D /* Omnes-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D88224B0878007A80AE /* Omnes-Hairline.otf */; };
+		C1FE5AD7224B1AE300E2AB9D /* Omnes-HairlineItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D7B224B0874007A80AE /* Omnes-HairlineItalic.otf */; };
+		C1FE5AD8224B1AE300E2AB9D /* Omnes-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D7D224B0875007A80AE /* Omnes-Light.otf */; };
+		C1FE5AD9224B1AE300E2AB9D /* Omnes-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D7C224B0874007A80AE /* Omnes-LightItalic.otf */; };
+		C1FE5ADA224B1AE300E2AB9D /* Omnes-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D7E224B0875007A80AE /* Omnes-Medium.otf */; };
+		C1FE5ADB224B1AE300E2AB9D /* Omnes-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D7F224B0875007A80AE /* Omnes-MediumItalic.otf */; };
+		C1FE5ADC224B1AE300E2AB9D /* Omnes-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D79224B0873007A80AE /* Omnes-Regular.otf */; };
+		C1FE5ADD224B1AE300E2AB9D /* Omnes-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D7A224B0874007A80AE /* Omnes-RegularItalic.otf */; };
+		C1FE5ADE224B1AE300E2AB9D /* Omnes-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D87224B0878007A80AE /* Omnes-Semibold.otf */; };
+		C1FE5ADF224B1AE300E2AB9D /* Omnes-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D82224B0877007A80AE /* Omnes-SemiboldItalic.otf */; };
+		C1FE5AE0224B1AE300E2AB9D /* Omnes-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D84224B0877007A80AE /* Omnes-Thin.otf */; };
+		C1FE5AE1224B1AE300E2AB9D /* Omnes-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1076D85224B0877007A80AE /* Omnes-ThinItalic.otf */; };
+		C1FE5AE8224B2AD900E2AB9D /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE5AE7224B2AD900E2AB9D /* UserDetailTableViewCell.swift */; };
+		C1FE5AEA224BD18600E2AB9D /* UserDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1FE5AE9224BD18600E2AB9D /* UserDetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +84,8 @@
 		C1B6B53022499CBC00DC8380 /* FormUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUserViewController.swift; sourceTree = "<group>"; };
 		C1B6B5332249A06400DC8380 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		C1B6B5352249A5A500DC8380 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		C1FE5AE7224B2AD900E2AB9D /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
+		C1FE5AE9224BD18600E2AB9D /* UserDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailTableViewCell.xib; sourceTree = "<group>"; };
 		F079F2006B9CB5099C1581E8 /* Pods-DambertIntercorp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DambertIntercorp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DambertIntercorp/Pods-DambertIntercorp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,10 +163,8 @@
 		C1B6B5012249405200DC8380 /* DambertIntercorp */ = {
 			isa = PBXGroup;
 			children = (
-				C1B6B5152249528300DC8380 /* ViewController */,
-				C1B6B5202249611600DC8380 /* Model */,
-				C1B6B5322249A00C00DC8380 /* Services */,
-				C1B6B5142249527D00DC8380 /* Util */,
+				C1FE5AE6224B2A6600E2AB9D /* Core */,
+				C1FE5AE5224B2A5D00E2AB9D /* User Interfaces */,
 				C1076D76224B0844007A80AE /* Resources */,
 				C1B6B5252249787400DC8380 /* DambertIntercorp.entitlements */,
 				C1B6B5022249405200DC8380 /* AppDelegate.swift */,
@@ -169,9 +189,9 @@
 		C1B6B5152249528300DC8380 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C1B6B523224965FE00DC8380 /* ProfileViewController.swift */,
 				C1B6B51B2249541F00DC8380 /* LoginViewController.swift */,
 				C1B6B521224965BC00DC8380 /* HomeViewController.swift */,
-				C1B6B523224965FE00DC8380 /* ProfileViewController.swift */,
 				C1B6B52622497BE600DC8380 /* PhoneNumberViewController.swift */,
 				C1B6B52E224998D000DC8380 /* PhoneNumberVerifyViewController.swift */,
 				C1B6B53022499CBC00DC8380 /* FormUserViewController.swift */,
@@ -193,6 +213,34 @@
 				C1B6B5332249A06400DC8380 /* UserService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C1FE5AE4224B2A5200E2AB9D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C1FE5AE7224B2AD900E2AB9D /* UserDetailTableViewCell.swift */,
+				C1FE5AE9224BD18600E2AB9D /* UserDetailTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		C1FE5AE5224B2A5D00E2AB9D /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				C1B6B5152249528300DC8380 /* ViewController */,
+				C1FE5AE4224B2A5200E2AB9D /* TableViewCells */,
+			);
+			path = "User Interfaces";
+			sourceTree = "<group>";
+		};
+		C1FE5AE6224B2A6600E2AB9D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C1B6B5202249611600DC8380 /* Model */,
+				C1B6B5322249A00C00DC8380 /* Services */,
+				C1B6B5142249527D00DC8380 /* Util */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		F9587DD07B4833C633D05AFA /* Pods */ = {
@@ -272,6 +320,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FE5AD0224B1AE300E2AB9D /* Omnes-Black.otf in Resources */,
+				C1FE5AEA224BD18600E2AB9D /* UserDetailTableViewCell.xib in Resources */,
+				C1FE5AD1224B1AE300E2AB9D /* Omnes-BlackItalic.otf in Resources */,
+				C1FE5AD2224B1AE300E2AB9D /* Omnes-Bold.otf in Resources */,
+				C1FE5AD3224B1AE300E2AB9D /* Omnes-BoldItalic.otf in Resources */,
+				C1FE5AD4224B1AE300E2AB9D /* Omnes-ExtraLight.otf in Resources */,
+				C1FE5AD5224B1AE300E2AB9D /* Omnes-ExtraLightItalic.otf in Resources */,
+				C1FE5AD6224B1AE300E2AB9D /* Omnes-Hairline.otf in Resources */,
+				C1FE5AD7224B1AE300E2AB9D /* Omnes-HairlineItalic.otf in Resources */,
+				C1FE5AD8224B1AE300E2AB9D /* Omnes-Light.otf in Resources */,
+				C1FE5AD9224B1AE300E2AB9D /* Omnes-LightItalic.otf in Resources */,
+				C1FE5ADA224B1AE300E2AB9D /* Omnes-Medium.otf in Resources */,
+				C1FE5ADB224B1AE300E2AB9D /* Omnes-MediumItalic.otf in Resources */,
+				C1FE5ADC224B1AE300E2AB9D /* Omnes-Regular.otf in Resources */,
+				C1FE5ADD224B1AE300E2AB9D /* Omnes-RegularItalic.otf in Resources */,
+				C1FE5ADE224B1AE300E2AB9D /* Omnes-Semibold.otf in Resources */,
+				C1FE5ADF224B1AE300E2AB9D /* Omnes-SemiboldItalic.otf in Resources */,
+				C1FE5AE0224B1AE300E2AB9D /* Omnes-Thin.otf in Resources */,
+				C1FE5AE1224B1AE300E2AB9D /* Omnes-ThinItalic.otf in Resources */,
 				C1B6B50D2249405300DC8380 /* LaunchScreen.storyboard in Resources */,
 				C1B6B52D2249943400DC8380 /* GoogleService-Info.plist in Resources */,
 				C1B6B50A2249405300DC8380 /* Assets.xcassets in Resources */,
@@ -346,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1B6B53122499CBC00DC8380 /* FormUserViewController.swift in Sources */,
+				C1FE5AE8224B2AD900E2AB9D /* UserDetailTableViewCell.swift in Sources */,
 				C1B6B524224965FE00DC8380 /* ProfileViewController.swift in Sources */,
 				C1B6B522224965BC00DC8380 /* HomeViewController.swift in Sources */,
 				C1B6B5032249405200DC8380 /* AppDelegate.swift in Sources */,

@@ -66,6 +66,10 @@ class Helper: NSObject {
         self.activityLoading?.stopAnimating()
     }
     
+    /**
+     Método que calcula la edad
+     - Parameter birthday: Fecha Nacimiento en formato dd-MM-yyyy
+     */
     static func calcAge(birthday: String) -> Int? {
         
         let dateFormater = DateFormatter()

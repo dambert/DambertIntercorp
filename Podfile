@@ -10,6 +10,5 @@ target 'DambertIntercorp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
   pod 'Firebase/Database'
-  pod 'SimpleTwoWayBinding'
 
 end

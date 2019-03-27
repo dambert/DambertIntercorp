@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
+    
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -24,15 +24,8 @@ class LoginViewController: UIViewController {
         
         self.navigationController?.navigationBar.isHidden = false
     }
+ 
     
-    // MARK: IBActions
-    @IBAction func closeSessionTap(_ sender: Any) {
-        
-        try! Auth.auth().signOut()
-
-        
-        self.navigationController?.dismiss(animated: true, completion: nil)
-    }
     
     
     

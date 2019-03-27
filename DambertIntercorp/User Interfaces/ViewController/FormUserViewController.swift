@@ -31,30 +31,31 @@ class FormUserViewController: UIViewController {
         // Si el formulario es válido entonces procedemos a guardar la información adicional
         if self.isValidForm() {
             
-            // Registrar la data adicional de usuario
+            // Mostrar Loading
+            Helper.showLoading(viewController: self)
             
+            // Registrar la data adicional de usuario
             let formatter = DateFormatter()
             formatter.dateFormat = "dd-MM-yyyy"
-            
-            
             let user = UserModel(name: self.nameTextField.text! , lastname: self.lastNameTextField.text! , birthday: formatter.string(from: self.birthdayDatePicker.date))
             
             // Guardamos al usuario en el documento /users/ en FirebaseRealtimeDatabase
             UserService.sharedInstance.saveUser(userModel: user) { (success) in
+                
+                // Ocultar Loading
+                Helper.hideLoading(viewController: self)
+                
                 // Se logró guardar la información adicional del usuario exitosamente
                 if success == true {
                      //Redireccionamos al HomeViewController
+                    self.navigationController?.popToRootViewController(animated: false)
                      self.performSegue(withIdentifier: Constants.Segue.REGISTER_DATA_USER_TO_HOME, sender: nil)
                 }else{
                     // Ocurrió un error                    
-                    Helper.showAlert(message:"Ocurrió un error al guardar la información adicional del usuario, por favor vuelva a intentarlo." , viewController: self)
+                    Helper.showAlert(message:Constants.MessagesVC.FORM_USER_ERROR , viewController: self)
                 }
             }
-            
-            
-           
         }
-        
     }
     
     /**
@@ -65,9 +66,9 @@ class FormUserViewController: UIViewController {
         
         var messageValidation = ""
         if(self.nameTextField.text?.isEmpty == true){
-            messageValidation = "Es necesario que ingreses tu nombre"
+            messageValidation = Constants.MessagesVC.FORM_USER_VALIDATION_NAME
         }else if(self.lastNameTextField.text?.isEmpty == true){
-            messageValidation = "Es necesario que ingreses tu apellido"
+            messageValidation = Constants.MessagesVC.FORM_USER_VALIDATION_LASTNAME
         }
         
         if messageValidation.isEmpty == false {

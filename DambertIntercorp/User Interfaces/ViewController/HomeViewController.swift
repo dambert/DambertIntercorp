@@ -11,6 +11,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
     
+    @IBOutlet var nameLabel: UILabel!
+    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +20,21 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
         UserService.sharedInstance.getUser { (userModel) in
             
             let user = userModel
             if user != nil {
-                
-                let age = Helper.calcAge(birthday: user!.birthday)
-                
-                print(age)
+                self.nameLabel.text = user?.name.uppercased()
                 
             }
         }
+    }
+    
+    func setupView(){
+        
     }
     
     

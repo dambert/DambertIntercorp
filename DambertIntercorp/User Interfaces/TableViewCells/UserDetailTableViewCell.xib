@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Omnes-Light.otf">
+            <string>Omnes-Light</string>
+        </array>
+        <array key="Omnes-Semibold.otf">
+            <string>Omnes-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserDetailTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userDetailTableViewCell" id="LCT-IW-EaQ" customClass="UserDetailTableViewCell" customModule="DambertIntercorp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LCT-IW-EaQ" id="r3E-nQ-M0v">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-lo-ldQ">
+                        <rect key="frame" x="176" y="13" width="170" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="170" id="OPD-gE-LOt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Omnes-Light" family="Omnes" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abF-xc-sIp">
+                        <rect key="frame" x="21" y="12" width="131" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="131" id="KJd-h6-8zW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Omnes-Semibold" family="Omnes" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.88235294117647056" green="0.91764705882352937" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="abF-xc-sIp" firstAttribute="leading" secondItem="r3E-nQ-M0v" secondAttribute="leadingMargin" constant="5" id="CSl-gq-9Rn"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Vbe-lo-ldQ" secondAttribute="bottom" constant="3" id="avl-Ro-qLU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Vbe-lo-ldQ" secondAttribute="trailing" constant="13" id="hT9-Mh-LPq"/>
+                    <constraint firstItem="abF-xc-sIp" firstAttribute="top" secondItem="r3E-nQ-M0v" secondAttribute="topMargin" constant="1" id="jIR-Xy-ekb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="abF-xc-sIp" secondAttribute="bottom" constant="4" id="sv8-MC-yaY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="Vbe-lo-ldQ" id="pya-es-7iB"/>
+                <outlet property="nameLabel" destination="abF-xc-sIp" id="2Iv-bD-nrc"/>
+            </connections>
+            <point key="canvasLocation" x="13.6" y="61.169415292353825"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -39,13 +39,17 @@ class PhoneNumberViewController: UIViewController {
         
         
         if(self.phoneTextField.text?.isEmpty == true){
-            Helper.showAlert(message: "Es necesario ingresar tu número para poder verificarlo" , viewController: self)
+            Helper.showAlert(message: Constants.MessagesVC.PHONE_NUMBER_REQUIRED , viewController: self)
+            return
+        }else if( (self.phoneTextField.text?.count ?? 0) < 9){
+            Helper.showAlert(message: Constants.MessagesVC.PHONE_NUMBER_VALIDATION_LONGITUD , viewController: self)
+            return
         }
         
         
         Helper.showLoading(viewController: self)
         
-        // Defino Lenguaje Code spanish.
+        // Defino Language Code spanish.
         Auth.auth().languageCode = "es";
         
         // Número concatenado
@@ -55,7 +59,7 @@ class PhoneNumberViewController: UIViewController {
             
             Helper.hideLoading(viewController: self)
             if error != nil{
-                Helper.showAlert(message: "Error al intentar verificar tu numero, vuelva a intentarlo" , viewController: self)
+                Helper.showAlert(message:  Constants.MessagesVC.PHONE_NUMBER_VALIDATION_ERROR , viewController: self)
                 return
             }else{
                 self.performSegue(withIdentifier: Constants.Segue.PHONE_TO_VERIFY, sender: verificationID)
@@ -67,11 +71,20 @@ class PhoneNumberViewController: UIViewController {
         
     }
     
-    
-    
-    
-
-
-
 
 }
+
+
+extension PhoneNumberViewController: UITextFieldDelegate{
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let textFieldText = textField.text,
+            let rangeOfTextToReplace = Range(range, in: textFieldText) else {
+                return false
+        }
+        let substringToReplace = textFieldText[rangeOfTextToReplace]
+        let count = textFieldText.count - substringToReplace.count + string.count
+        return count < 10
+    }
+}
+

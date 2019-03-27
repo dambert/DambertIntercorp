@@ -57,7 +57,10 @@ class UserService: NSObject {
         self.ref.child(uid!).observe(.value) { (snapshot) in
             if snapshot.exists() {
                 
-                success(snapshot.value as? UserModel)
+                let data = snapshot.value as? [String:String]
+                let user = UserModel(name: data?["name"] ?? "", lastname: data?["lastname"] ?? "", birthday: data?["birthday"] ?? "")
+                
+                success(user)
             } else{
                 success(nil)
             }
