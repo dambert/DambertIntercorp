@@ -2,21 +2,49 @@
 //  AppDelegate.swift
 //  DambertIntercorp
 //
-//  Created by Dambert.Munoz on 3/25/19.
+//  Created by Dambert.Munoz on 3/26/19.
 //  Copyright © 2019 dambert.intercorp.retail. All rights reserved.
 //
 
 import UIKit
+import Firebase
+import UserNotifications
+import Messages
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        self.configureNotification()
+        
         return true
+    }
+    
+    func configureNotification() {
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+        }
+        
+        UIApplication.shared.registerForRemoteNotifications()
+        
+        //Messaging.messaging().delegate = self
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,7 +68,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        let firebaseAuth = Auth.auth()
+        
+        if (firebaseAuth.canHandleNotification(userInfo)){
+            return
+        }
+        
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let firebaseAuth = Auth.auth()
+        firebaseAuth.setAPNSToken(deviceToken, type: AuthAPNSTokenType.unknown)
+    }
 
 }
 
